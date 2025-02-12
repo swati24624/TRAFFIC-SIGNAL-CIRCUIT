@@ -36,22 +36,23 @@ void normalTrafficCycle() {
     }
     digitalWrite(greenLED, LOW);
 
-    digitalWrite(yellowLED, HIGH);
-    for (int i = 0; i < 1500; i += 100) { 
-        if (pedestrianRequest) {
+   digitalwrite(yellowlLED,HIGH);
+   for (int i =0;i < 1500; i =+ 100){
+       if ( pedestrianRequest){
             handlePedestrianCrossing();
-            pedestrianRequest = false;
+            pedestrianRequesr = false;
             return;
-        }
-        delay(400);
-    }
-    digitalWrite(yellowLED, LOW);
+       }
+       delay(400);
+   }
+   digitalWrite(yellowLED,LOW);
 
-    digitalWrite(redLED, HIGH);
-    delay(1500);
-    digitalWrite(redLED, LOW);
-}
 
+   digitalwrite(redLED,HIGH);
+   delay (1500);
+   digitalWrite(redLED,LOW);
+ }  
+                    
 void handlePedestrianCrossing() {
     digitalWrite(greenLED, LOW);
     digitalWrite(yellowLED, LOW);
@@ -63,6 +64,7 @@ void handlePedestrianCrossing() {
 void requestCrossing() {
     pedestrianRequest = true;
 }
+
 
 
 TINKERCAD LINK
